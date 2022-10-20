@@ -1,0 +1,13 @@
+* 64 inputs to neural net (each square of board). -1 = black, 0 = empty, 1 = white
+* 1 output (0-63), round to square of board to play on
+
+* Copy list of genomes from NEAT.
+* Each adjacent genome plays a match against each other.
+	* This match involves querying each neural net 32 times for moves.
+* Knockout losers and assign them fitness based on what score they had at the end
+* Repeat this process assigning bonus fitness to winners of later rounds.
+* When there is only one genome left return all of the fitnesses back to NEAT.
+* Config:
+    * No fitness target
+    * Set number of generations
+    * Hopefully the best one learns the game.
